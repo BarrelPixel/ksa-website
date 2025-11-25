@@ -116,7 +116,7 @@ export default function Home() {
           </p>
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-primary hover:opacity-70 transition-opacity"
+            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-accent hover:opacity-70 transition-opacity"
           >
             Learn More About Us
             <svg
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-primary hover:opacity-70 transition-opacity"
+            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-accent hover:opacity-70 transition-opacity"
           >
             View All Projects
             <svg
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-primary hover:opacity-70 transition-opacity"
+            className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-accent hover:opacity-70 transition-opacity"
           >
             View All Services
             <svg
@@ -252,7 +252,7 @@ export default function Home() {
             },
           ].map((service) => (
             <div key={service.title} className="group">
-              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-semibold mb-3 group-hover:text-accent transition-colors">
                 {service.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -275,7 +275,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-block text-xs tracking-widest uppercase px-8 py-4 border border-white text-white hover:bg-white hover:text-primary transition-all"
+            className="inline-block text-xs tracking-widest uppercase px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 transition-all"
           >
             Get in Touch
           </Link>

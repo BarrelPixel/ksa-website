@@ -275,7 +275,7 @@ export default function About() {
           </p>
           <Link
             href="/contact"
-            className="inline-block text-xs tracking-widest uppercase px-8 py-4 border border-white text-white hover:bg-white hover:text-primary transition-all"
+            className="inline-block text-xs tracking-widest uppercase px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 transition-all"
           >
             Start a Conversation
           </Link>

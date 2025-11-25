@@ -29,7 +29,7 @@ export default function Contact() {
                   <input
                     type="text"
                     required
-                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-primary focus:ring-0 bg-transparent transition-colors"
+                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-accent focus:ring-0 bg-transparent transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -40,7 +40,7 @@ export default function Contact() {
                   <input
                     type="email"
                     required
-                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-primary focus:ring-0 bg-transparent transition-colors"
+                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-accent focus:ring-0 bg-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-primary focus:ring-0 bg-transparent transition-colors"
+                    className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-accent focus:ring-0 bg-transparent transition-colors"
                     placeholder="(386) 000-0000"
                   />
                 </div>
@@ -61,7 +61,7 @@ export default function Contact() {
                   <label className="block text-xs tracking-widest uppercase text-gray-500 mb-3">
                     Project Type
                   </label>
-                  <select className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-primary focus:ring-0 bg-transparent transition-colors">
+                  <select className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-accent focus:ring-0 bg-transparent transition-colors">
                     <option value="">Select a type</option>
                     <option value="residential-new">Residential - New Construction</option>
                     <option value="residential-renovation">Residential - Renovation</option>
@@ -81,7 +81,7 @@ export default function Contact() {
                 <textarea
                   required
                   rows={5}
-                  className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-primary focus:ring-0 bg-transparent transition-colors resize-none"
+                  className="w-full px-0 py-3 border-0 border-b border-gray-300 focus:border-accent focus:ring-0 bg-transparent transition-colors resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                 </span>
                 <a
                   href="tel:+1000000000"
-                  className="text-lg hover:text-primary transition-colors"
+                  className="text-lg hover:text-accent transition-colors"
                 >
                   {/* TODO: Add Kevin's phone */}
                 </a>
@@ -129,7 +129,7 @@ export default function Contact() {
                 </span>
                 <a
                   href="mailto:info@example.com"
-                  className="text-lg hover:text-primary transition-colors"
+                  className="text-lg hover:text-accent transition-colors"
                 >
                   {/* TODO: Add Kevin's email */}
                 </a>

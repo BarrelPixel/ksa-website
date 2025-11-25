@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors - KSA Green */
-  --color-primary: #2596be;
-  --color-primary-light: #3aa8cf;
+  /* Brand Colors */
+  --color-primary: #0A0A0A;
+  --color-primary-light: #1a1a1a;
+  --color-accent: #607054;
+  --color-accent-light: #728564;
   --color-white: #FFFFFF;
   --color-black: #0A0A0A;
   --color-gray-50: #F9FAFB;
@@ -32,8 +34,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #2596be;
-  --color-primary-light: #3aa8cf;
+  --color-primary: #0A0A0A;
+  --color-primary-light: #1a1a1a;
+  --color-accent: #607054;
+  --color-accent-light: #728564;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-playfair);

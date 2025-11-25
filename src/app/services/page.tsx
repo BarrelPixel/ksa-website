@@ -165,7 +165,7 @@ export default function Services() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                <span className="text-xs tracking-widest uppercase text-primary mb-4 block">
+                <span className="text-xs tracking-widest uppercase text-accent mb-4 block">
                   {service.subtitle}
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-semibold mb-6">
@@ -178,7 +178,7 @@ export default function Services() {
                   {service.features.map((feature) => (
                     <div key={feature.title} className="flex gap-4">
                       <svg
-                        className="w-5 h-5 text-primary flex-shrink-0 mt-1"
+                        className="w-5 h-5 text-accent flex-shrink-0 mt-1"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -254,7 +254,7 @@ export default function Services() {
               },
             ].map((step) => (
               <div key={step.number}>
-                <span className="text-4xl font-bold text-primary mb-4 block">
+                <span className="text-4xl font-bold text-accent mb-4 block">
                   {step.number}
                 </span>
                 <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
