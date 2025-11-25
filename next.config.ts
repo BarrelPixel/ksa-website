@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Remove trailing slash issues on GitHub Pages
+  // GitHub Pages configuration
+  basePath: '/ksa-website',
+  assetPrefix: '/ksa-website',
   trailingSlash: true,
 };
 
