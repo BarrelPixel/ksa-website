@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kevin Schweizer Architect Website
+
+A modern, responsive website for Kevin Schweizer Architect, built with Next.js and Tailwind CSS.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS
+- **Fonts**: Geist, Playfair Display
+- **Language**: TypeScript
+
+## Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Hero, featured project, about teaser, selected works, services preview |
+| Works | `/projects` | Project gallery with category filters (Residential, Commercial, Interior) |
+| About | `/about` | Bio, design philosophy, location, FAQs, press & mentions |
+| Services | `/services` | Full service descriptions with process overview |
+| Contact | `/contact` | Contact form and studio information |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Home page
+│   ├── about/page.tsx     # About page (with FAQs & Mentions)
+│   ├── projects/page.tsx  # Works page (with filtering)
+│   ├── services/page.tsx  # Services page
+│   ├── contact/page.tsx   # Contact page
+│   └── layout.tsx         # Root layout
+├── components/
+│   └── layout/
+│       ├── Header.tsx     # Navigation header
+│       └── Footer.tsx     # Site footer
+└── styles/
+    └── globals.css        # Global styles & Tailwind config
+```
 
-## Learn More
+## Navigation Structure
 
-To learn more about Next.js, take a look at the following resources:
+The site uses a simplified 4-item navigation:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **WORKS** - Project portfolio with photos/videos, filterable by category
+- **ABOUT** - Studio information, FAQs, and press mentions
+- **SERVICES** - Architectural services offered
+- **CONTACT** - Contact form and studio details
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deploy on [Vercel](https://vercel.com) for optimal Next.js performance:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for details.

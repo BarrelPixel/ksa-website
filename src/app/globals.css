@@ -190,3 +190,8 @@ a {
   background: var(--color-black);
   color: var(--color-white);
 }
+
+/* Logo primary color filter - converts logo to accent green #607054 */
+.logo-primary {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(8%) saturate(1037%) hue-rotate(52deg) brightness(95%) contrast(86%);
+}

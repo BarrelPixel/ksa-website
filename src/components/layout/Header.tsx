@@ -40,7 +40,7 @@ export default function Header() {
             alt="Kevin Schweizer Architect"
             width={140}
             height={80}
-            className={`h-16 w-auto transition-all ${scrolled ? '' : 'brightness-0 invert'}`}
+            className="h-16 w-auto transition-all logo-primary"
             priority
           />
         </Link>

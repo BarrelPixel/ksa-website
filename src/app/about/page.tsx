@@ -1,6 +1,58 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
+// Placeholder FAQs - replace with actual content
+const faqs = [
+  {
+    question: 'What types of projects does Kevin Schweizer Architect handle?',
+    answer:
+      'We specialize in residential, commercial, and interior design projects. Our work includes new construction, renovations, historic preservation, and custom home design throughout Florida and beyond.',
+  },
+  {
+    question: 'What is organic architecture?',
+    answer:
+      'Organic architecture is a philosophy that promotes harmony between human habitation and nature. Rooted in the principles of Frank Lloyd Wright, it emphasizes integrating structures with their sites, using natural materials, and creating spaces that feel connected to the environment.',
+  },
+  {
+    question: 'How long does a typical project take?',
+    answer:
+      'Project timelines vary based on scope and complexity. A residential design project typically takes 3-6 months for design development, with construction timelines depending on the contractor and project size. We provide detailed schedules during our initial consultation.',
+  },
+  {
+    question: 'Do you work on projects outside of Florida?',
+    answer:
+      'Yes, while our studio is based in New Smyrna Beach, we work on projects throughout Florida and have experience with projects in other states. We can discuss your specific location during our consultation.',
+  },
+  {
+    question: 'What should I expect during the design process?',
+    answer:
+      'Our process begins with an initial consultation to understand your vision, site, and budget. We then move through schematic design, design development, and construction documents, with regular client meetings throughout. We believe in collaborative design that reflects your unique needs.',
+  },
+];
+
+// Placeholder mentions - replace with actual press/awards
+const mentions = [
+  {
+    title: 'Florida Architecture Magazine',
+    description: 'Featured project: Coastal Modern Residence',
+    year: '2024',
+  },
+  {
+    title: 'New Smyrna Beach Historic Preservation Award',
+    description: 'Recognition for Canal Street restoration project',
+    year: '2023',
+  },
+  {
+    title: 'AIA Florida Design Awards',
+    description: 'Merit Award for Residential Design',
+    year: '2022',
+  },
+];
+
 export default function About() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <div>
       {/* Hero Section */}
@@ -136,6 +188,77 @@ export default function About() {
             <div className="absolute inset-0 flex items-center justify-center text-gray-400">
               <span className="text-sm">Map placeholder</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-24 lg:py-32 px-6 lg:px-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-xs tracking-widest uppercase text-gray-500 mb-6 block">
+              Common Questions
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-semibold">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 bg-white"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
+                >
+                  <span className="font-medium text-gray-900">{faq.question}</span>
+                  <span className="text-2xl text-gray-400 flex-shrink-0">
+                    {openFaq === index ? '−' : '+'}
+                  </span>
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-5">
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mentions Section */}
+      <section className="py-24 lg:py-32 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-xs tracking-widest uppercase text-gray-500 mb-6 block">
+              Recognition
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-semibold">
+              Press & Mentions
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {mentions.map((mention, index) => (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-gray-200 last:border-0"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    {mention.title}
+                  </h3>
+                  <p className="text-gray-600">{mention.description}</p>
+                </div>
+                <span className="text-sm text-gray-400 md:flex-shrink-0">
+                  {mention.year}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
