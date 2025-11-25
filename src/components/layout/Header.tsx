@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/ksa-website' : '';
+
 const navigation = [
   { name: 'WORKS', href: '/projects' },
   { name: 'ABOUT', href: '/about' },
@@ -36,7 +38,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/ksa-logo-transparent.svg"
+            src={`${basePath}/images/ksa-logo-transparent.svg`}
             alt="Kevin Schweizer Architect"
             width={140}
             height={80}
@@ -150,7 +152,7 @@ export default function Header() {
             {/* Logo in mobile menu */}
             <Link href="/" className="block mb-12" onClick={() => setMobileMenuOpen(false)}>
               <Image
-                src="/images/ksa-logo-transparent.svg"
+                src={`${basePath}/images/ksa-logo-transparent.svg`}
                 alt="Kevin Schweizer Architect"
                 width={140}
                 height={80}

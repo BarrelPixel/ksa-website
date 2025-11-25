@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/ksa-website' : '';
+
 const featuredProject = {
   title: 'Homeport',
   category: 'Residential',
@@ -37,7 +39,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 bg-gray-800">
           <Image
-            src="/images/home/homeport.webp"
+            src={`${basePath}/images/home/homeport.webp`}
             alt="Homeport - Kevin Schweizer's Residence"
             fill
             className="object-cover"
