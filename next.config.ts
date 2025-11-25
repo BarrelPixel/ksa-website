@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // GitHub Pages configuration
-  basePath: '/ksa-website',
-  assetPrefix: '/ksa-website',
   trailingSlash: true,
 };
 
